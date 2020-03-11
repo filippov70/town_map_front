@@ -1,4 +1,4 @@
-var geojsonFeature = {
+var geojsonFeatureSchool = {
   "type": "FeatureCollection",
   "name": "school",
   "crs": {
@@ -11,7 +11,7 @@ var geojsonFeature = {
       "type": "Feature",
       "properties": {
         "id": 1,
-        "name": "средняя школя №5",
+        "name": "Средняя школа №5",
         "p": 1600
       },
       "geometry": {
@@ -46,4 +46,3 @@ var geojsonFeature = {
   ]
 };
 
-var o = 6;

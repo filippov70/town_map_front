@@ -11,7 +11,7 @@
       "type": "Feature",
       "properties": {
         "id": 1,
-        "name": "средняя школя №5",
+        "name": "средняя школа №5",
         "p": 1600
       },
       "geometry": {
