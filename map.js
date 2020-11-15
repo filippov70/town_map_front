@@ -16,9 +16,7 @@ function loadMap() {
       attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
     }).addTo(map);
 
-  // var searchLayer = L.geoJSON(geojsonFeature, {
-  //   onEachFeature: onEachFeature
-  // }).addTo(map);
+
   var markers = [];
   var markersLayer = new L.LayerGroup();
 
@@ -30,16 +28,10 @@ function loadMap() {
     },
     onSelect: function (suggestion) {
       console.log(suggestion.data.school);
-      // find in layers
-      // for (layer in searchLayer._layers) {
-      //   var feature = searchLayer._layers[k=layer].feature;
-      //   if (suggestion.data.school == feature.properties.id) {
-      //     console.log(feature.properties.id + '--' + feature.properties.name);
-      //   }
-      // }
+
       // find in data
-      for (var i = 0; i < geojsonFeatureSchool.features.length; i++) {
-        var feature = geojsonFeatureSchool.features[i];
+      for (var i = 0; i < geojsonFeature.features.length; i++) {
+        var feature = geojsonFeature.features[i];
         if (suggestion.data.school == feature.properties.id) {
           console.log(feature.properties.id + '--' + feature.properties.name);
           $('#result').text(feature.properties.name);

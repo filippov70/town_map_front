@@ -1,4 +1,4 @@
-var geojsonFeatureSchool = {
+var geojsonFeature = {
   "type": "FeatureCollection",
   "name": "school",
   "crs": {
@@ -35,7 +35,20 @@ var geojsonFeatureSchool = {
       "type": "Feature",
       "properties": {
         "id": 3,
-        "name": "Школа №3 \"Технополис\"",
+        "name": "Школа №3 \"Лицей Технополис\"",
+        "p": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [83.191629872107, 54.934588154689]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "name": "Детский сад №1 \"Сказка\"",
         "p": 0
       },
       "geometry": {
