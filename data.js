@@ -43,7 +43,6 @@ var geojsonFeature = {
         "coordinates": [83.191629872107, 54.934588154689]
       }
     },
-
     {
       "type": "Feature",
       "properties": {
@@ -54,6 +53,54 @@ var geojsonFeature = {
       "geometry": {
         "type": "Point",
         "coordinates": [83.191629872107, 54.934588154689]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "name": "Детский сад \"Радуга\"",
+        "p": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [83.1867170, 54.9431017]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "name": "Детский сад \"Егорка\"",
+        "p": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [83.18668094, 54.94152111]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "name": "Детский сад \"Лёвушка\"",
+        "p": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [83.1933358, 54.9356191]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "name": "Детский сад \"Совёнок\"",
+        "p": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [83.1987712, 54.9376456]
       }
     }
   ]
