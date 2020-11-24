@@ -28,16 +28,22 @@ function loadMap() {
     },
     onSelect: function (suggestion) {
       console.log(suggestion.data.school);
-
+      var features = [];
       // find in data
       for (var i = 0; i < geojsonFeature.features.length; i++) {
         var feature = geojsonFeature.features[i];
         if (suggestion.data.school == feature.properties.id) {
           console.log(feature.properties.id + '--' + feature.properties.name);
-          $('#result').text(feature.properties.name);
-          clearMap();
-          addMarkers(feature);
+          //$('#result').text(feature.properties.name);
+          features.push(feature);
         }
+        if (suggestion.data.kindergarten == feature.properties.id) {
+          features.push(feature);
+        }
+      }
+      if (features.length > 0){
+        clearMap();
+        addMarkers(features);
       }
     }
   });
@@ -46,14 +52,23 @@ function loadMap() {
     markersLayer.clearLayers();
   }
 
-  function addMarkers(feature) {
-    // add marker
-    var myIcon = L.divIcon({
-      className: 'my-div-icon'
-    });
-    var marker = L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]/*, myIcon*/).bindPopup(feature.properties.name);
-    markersLayer.addLayer(marker);
+  function addMarkers(features) {
+    var bounds = [];
+    for (var i = 0; i < features.length; i++) {
+      // add marker
+      var feature = features[i];
+      var myIcon = L.divIcon({
+        className: 'my-div-icon'
+      });
+      var marker = L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]/*, myIcon*/).bindPopup(feature.properties.name);
+      
+      markersLayer.addLayer(marker);
+      bounds.push([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
+      //marker.openPopup();
+    }
     markersLayer.addTo(map);
-    map.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 17);
+        
+    //map.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 17);
+    map.fitBounds(bounds);
   }
 }
