@@ -49,7 +49,7 @@ var address = [
     {value:"Центральная32", data: {school: "1", kindergarten: "4"}},
     {value:"Центральная34", data: {school: "1", kindergarten: "4"}},
     {value:"ДНП Квартал-12", data: {school: "1", kindergarten: "4"}},
-    {value:"ТСН Молодой специалист", data: {school: "1", kindergarten: "4"}},
+    {value:"ТСН Молодой специалист", data: {school: "1", kindergarten: ["4", "5"]}}, // для примера
     {value:"ДНТ Кольцово Парк 2", data: {school: "1", kindergarten: "4"}},
     {value:"Общежитие ГППЗ", data: {school: "1", kindergarten: "4"}},
     {value:"СНТ Ветеран", data: {school: "1", kindergarten: "4"}},
@@ -74,7 +74,7 @@ var address = [
     {value:"Кольцово 34", data: {school: "2", kindergarten: "4"}},
     {value:"Кольцово 35", data: {school: "2", kindergarten: "4"}},
     {value:"Кольцово 36", data: {school: "2", kindergarten: "4"}},
-    {value:"Кольцово 37", data: {school: "2", kindergarten: "4"}},
+    {value:"Кольцово 37", data: {school: "2", kindergarten: "6"}},
     {value:"Кольцово 45", data: {school: "2", kindergarten: "4"}},
     {value:"Кольцово 46", data: {school: "2", kindergarten: "4"}},
     {value:"Кольцово 47", data: {school: "2", kindergarten: "4"}},

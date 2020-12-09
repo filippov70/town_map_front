@@ -12,9 +12,9 @@ function loadMap() {
   var map = L.map('map').setView([54.94, 83.19], 15);
   L.tileLayer(
     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-    }).addTo(map);
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+  }).addTo(map);
 
 
   var markers = [];
@@ -37,11 +37,20 @@ function loadMap() {
           //$('#result').text(feature.properties.name);
           features.push(feature);
         }
-        if (suggestion.data.kindergarten == feature.properties.id) {
-          features.push(feature);
+        if (Array.isArray(suggestion.data.kindergarten)) {
+          for (let index = 0; index < suggestion.data.kindergarten.length; index++) {
+            const element = suggestion.data.kindergarten[index];
+            if (element == feature.properties.id) {
+              features.push(feature);
+            }
+          }
+        } else {
+          if (suggestion.data.kindergarten == feature.properties.id) {
+            features.push(feature);
+          }
         }
       }
-      if (features.length > 0){
+      if (features.length > 0) {
         clearMap();
         addMarkers(features);
       }
@@ -61,14 +70,15 @@ function loadMap() {
         className: 'my-div-icon'
       });
       var marker = L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]/*, myIcon*/).bindPopup(feature.properties.name);
-      
+
       markersLayer.addLayer(marker);
       bounds.push([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
       //marker.openPopup();
     }
     markersLayer.addTo(map);
-        
+    var latLngBoundsMap = L.latLngBounds(bounds);
     //map.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 17);
-    map.fitBounds(bounds);
+    map.fitBounds(latLngBoundsMap);
+    map.zoomOut(0.5);
   }
 }
