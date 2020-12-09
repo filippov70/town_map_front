@@ -81,4 +81,11 @@ function loadMap() {
     map.fitBounds(latLngBoundsMap);
     map.zoomOut(0.5);
   }
+
+  function findMinMaxCoordinates(coordArray){ // coordArray = [[lng, lat], [lng, lat], [lng, lat]]
+    var returnArray = [];
+    // нужно сравнивать значения из coordArray для поиска max min
+    // найденные 2 точки записать в returnArray
+    return returnArray;
+  }
 }
