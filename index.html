@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <head>
   <style>
     html,
@@ -27,12 +27,12 @@
     }
 
     .autocomplete-suggestions strong {
-      font-weight: normal;
+      font-weight: lighter;
       color: #3399FF;
     }
 
     .autocomplete-group {
-      padding: 2px 5px;
+      padding: 1px 2px;
     }
 
     .autocomplete-group strong {
@@ -54,30 +54,26 @@
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin="" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>  
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
   <script src="jquery.autocomplete.min.js"></script>
   <script src="data.js"></script>
   <script src="addrs.js"></script>
   <script src="map.js"></script>
-
-  <meta charset="utf-8">
   <title>Поиск школы, детского сада</title>
 </head>
 
 <body onload="loadMap();">
-  <form>
-  <div style="height: 5%;">
-    <label for="tags">Ваш адрес: </label>
-    <input id="tags" type="text" name="addr" class="biginput">
-    <!-- <label id="info">Вы относитесь к </label>
-    <label id="result">...</label> -->
-  </div>
+  <form class="container">
+    <div style="height: 100%;">
+      <label for="tags">Ваш адрес: </label>
+      <input id="tags" style = "width: 70mm;" type="text" name="addr" class="input" placeholder="Введите первые буквы вашей улицы">
+    </div>
 </form>
-  <div class="map" id="map">
-
-  </div>
+<div class="map, container" id="map">
+</div>
     
 </body>
 
