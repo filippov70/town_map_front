@@ -84,8 +84,28 @@ function loadMap() {
 
   function findMinMaxCoordinates(coordArray){ // coordArray = [[lng, lat], [lng, lat], [lng, lat]]
     var returnArray = [];
+    for (var i = 0; i < coordArray.length; i ++){
+      let maxX= 0,
+      maxY= Number.POSITIVE_INFINITY,
+      minX = Number.POSITIVE_INFINITY,
+      minY = Number.POSITIVE_INFINITY;
+      if (coordArray[i][0] < minX){
+        minX = coordArray[i][0];
+      }
+      if (coordArray[i][1] < minY){
+        minY = coordArray[i][1];
+      }
+      if (coordArray[i][0] > maxX){
+        maxX = coordArray[i][0];
+      }
+      if (coordArray[i][1] < maxY){
+        maxX = coordArray[i][1];
+      }
+    }
     // нужно сравнивать значения из coordArray для поиска max min
     // найденные 2 точки записать в returnArray
-    return returnArray;
+    returnArray.push([minX, minY]);
+    returnArray.push([maxX, maxY]);
+    return retunArray;
   }
 }
