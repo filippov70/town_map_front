@@ -75,8 +75,9 @@ function loadMap() {
       bounds.push([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
       //marker.openPopup();
     }
+    let sortBounds = findMinMaxCoordinates(bounds);
     markersLayer.addTo(map);
-    var latLngBoundsMap = L.latLngBounds(bounds);
+    var latLngBoundsMap = L.latLngBounds(sortBounds);
     //map.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 17);
     map.fitBounds(latLngBoundsMap);
     map.zoomOut(0.5);
@@ -84,11 +85,9 @@ function loadMap() {
 
   function findMinMaxCoordinates(coordArray){ // coordArray = [[lng, lat], [lng, lat], [lng, lat]]
     var returnArray = [];
-    for (var i = 0; i < coordArray.length; i ++){
-      let maxX= 0,
-      maxY= Number.POSITIVE_INFINITY,
-      minX = Number.POSITIVE_INFINITY,
-      minY = Number.POSITIVE_INFINITY;
+    var maxX = 0, maxY = 0, minX = Number.POSITIVE_INFINITY, minY = Number.POSITIVE_INFINITY;
+    for (var i = 0; i < coordArray.length; i++){
+      
       if (coordArray[i][0] < minX){
         minX = coordArray[i][0];
       }
@@ -98,14 +97,14 @@ function loadMap() {
       if (coordArray[i][0] > maxX){
         maxX = coordArray[i][0];
       }
-      if (coordArray[i][1] < maxY){
-        maxX = coordArray[i][1];
+      if (coordArray[i][1] > maxY){
+        maxY = coordArray[i][1];
       }
     }
     // нужно сравнивать значения из coordArray для поиска max min
     // найденные 2 точки записать в returnArray
     returnArray.push([minX, minY]);
     returnArray.push([maxX, maxY]);
-    return retunArray;
+    return returnArray;
   }
 }
