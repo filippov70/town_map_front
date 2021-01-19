@@ -69,7 +69,7 @@ function loadMap() {
       var myIcon = L.divIcon({
         className: 'my-div-icon'
       });
-      var marker = L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]/*, myIcon*/).bindPopup(feature.properties.name);
+      var marker = L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]/*, myIcon*/).bindPopup(feature.properties.name + "</br>" + feature.properties.ref);
 
       markersLayer.addLayer(marker);
       bounds.push([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);

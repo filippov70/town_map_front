@@ -12,7 +12,8 @@ var geojsonFeature = {
       "properties": {
         "id": 1,
         "name": "Средняя школа №5",
-        "p": 1600
+        "p": 1600,
+        "ref": "<a href=\"http://www.five-school.ru\" target=\"_blank\">Перейти на сайт</a>"
       },
       "geometry": {
         "type": "Point",
@@ -24,7 +25,8 @@ var geojsonFeature = {
       "properties": {
         "id": 2,
         "name": "Биотехнологический лицей №21",
-        "p": 2000
+        "p": 2000,
+        "ref": "<a href=\"http://biolicey21.ru\">Перейти на сайт</a>"
       },
       "geometry": {
         "type": "Point",
@@ -36,7 +38,8 @@ var geojsonFeature = {
       "properties": {
         "id": 3,
         "name": "Школа №3 \"Лицей Технополис\"",
-        "p": 0
+        "p": 0,
+        "ref": "<a href=\"http://лицейтехнополис.рф\">Перейти на сайт</a>"
       },
       "geometry": {
         "type": "Point",
@@ -48,7 +51,8 @@ var geojsonFeature = {
       "properties": {
         "id": 4,
         "name": "Детский сад №1 \"Сказка\"",
-        "p": 0
+        "p": 0,
+        "ref": "<a href=\"http://detsad.colcovo.ru\">Перейти на сайт</a>"
       },
       "geometry": {
         "type": "Point",
@@ -60,7 +64,8 @@ var geojsonFeature = {
       "properties": {
         "id": 5,
         "name": "Детский сад \"Радуга\"",
-        "p": 0
+        "p": 0,
+        "ref": "<a href=\"http://dsad_4.p_kol.edu54.ru\">Перейти на сайт</a>"
       },
       "geometry": {
         "type": "Point",
@@ -72,7 +77,8 @@ var geojsonFeature = {
       "properties": {
         "id": 6,
         "name": "Детский сад \"Егорка\"",
-        "p": 0
+        "p": 0,
+        "ref": "<a href=\"http://egorka.kolcovo.ru/\">Перейти на сайт</a>"
       },
       "geometry": {
         "type": "Point",
@@ -84,7 +90,8 @@ var geojsonFeature = {
       "properties": {
         "id": 7,
         "name": "Детский сад \"Лёвушка\"",
-        "p": 0
+        "p": 0,
+        "ref": "<a href=\"http://levushka.edusite.ru\">Перейти на сайт</a>"
       },
       "geometry": {
         "type": "Point",
@@ -96,7 +103,8 @@ var geojsonFeature = {
       "properties": {
         "id": 8,
         "name": "Детский сад \"Совёнок\"",
-        "p": 0
+        "p": 0,
+        "ref": "<a href=\"http://sovenok.kolcovo.ru\">Перейти на сайт</a>"
       },
       "geometry": {
         "type": "Point",
