@@ -4,6 +4,7 @@ var address = [
     //Образец {value:"", data: {school: "1", kindergarten: ""}},
     //Школа № 5
     {value:"Кольцово 1", data: {school: "1", kindergarten: "4"}},
+    //{value:"Все школы", data: {school: ["1", "2", "3"], kindergarten: ["4", "5", "6", "7", "8"]}},
     {value:"Кольцово 2", data: {school: "1", kindergarten: "4"}},
     {value:"Кольцово 3", data: {school: "1", kindergarten: "4"}},
     {value:"Кольцово 4", data: {school: "1", kindergarten: "4"}},
