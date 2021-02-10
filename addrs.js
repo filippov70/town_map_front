@@ -50,7 +50,7 @@ var address = [
     {value:"Центральная 30", data: {school: "1", kindergarten: "4"}},
     {value:"Центральная 32", data: {school: "1", kindergarten: "4"}},
     {value:"Центральная 34", data: {school: "1", kindergarten: "4"}},
-    {value:"ДНП Квартал-12", data: {school: "1", kindergarten: "9"}},
+    {value:"ДНП Квартал 12", data: {school: "1", kindergarten: "9"}},
     {value:"ТСН Молодой специалист", data: {school: "1", kindergarten: "9"}}, // для примера
     {value:"ДНТ Кольцово Парк 2", data: {school: "1", kindergarten: "9"}},
     {value:"Общежитие ГППЗ", data: {school: "1", kindergarten: "9"}},
