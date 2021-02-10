@@ -110,6 +110,18 @@ var geojsonFeature = {
         "type": "Point",
         "coordinates": [83.1987712, 54.9376456]
       }
+    },{
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "name": "Детский сад \"Золотой ключик\"",
+        "p": 0,
+        "ref": "<a href=\"\"></a>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [83.203897, 54.933521]
+      }
     }
   ]
 };
